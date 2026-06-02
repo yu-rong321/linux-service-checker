@@ -1,0 +1,18 @@
+[project]
+name = "linux-service-checker"
+version = "0.1.0"
+description = "A CLI tool for checking Ubuntu/Linux service health."
+authors = [
+    { name = "Yu-Rong Wu" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "requests",
+    "psutil"
+]
+
+[project.scripts]
+service-checker = "service_checker.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
